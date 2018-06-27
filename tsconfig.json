@@ -1,0 +1,29 @@
+{
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "sourceMap": true,
+        "module": "es6",
+        "target": "es5",
+        "jsx": "react",
+        "strictNullChecks": true,
+        "moduleResolution": "node",
+        "noImplicitAny": true,
+        "noImplicitThis": true,
+        "alwaysStrict": true,
+        "noUnusedLocals": true,
+        "outDir": "build",
+        "lib": ["es6", "es7", "dom"],
+    },
+    "exclude": [
+        "node_modules",
+        "build",
+    ],
+    "include": [
+        "src/**/*tsx",
+        "src/**/*ts",
+        "src/*",
+    ],
+    "files": [
+        "global.d.ts"
+    ]
+}
