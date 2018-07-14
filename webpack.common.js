@@ -4,7 +4,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 
 module.exports = {
-    entry: ['whatwg-fetch', 'babel-polyfill', './src/index.tsx'],
+    entry: ['whatwg-fetch', 'babel-polyfill', './src/App.tsx'],
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].js'
