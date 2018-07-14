@@ -3,9 +3,9 @@
 # Check https://circleci.com/docs/2.0/language-javascript/ for more details
 #
 version: 2
-dependencies: 
-  pre: 
-    - yarn global add npm
+# dependencies: 
+#   pre: 
+#     - yarn global add npm
 jobs:
   build:
     docker:
@@ -23,25 +23,23 @@ jobs:
       - checkout
 
       # Download and cache dependencies
-      - restore_cache:
-          keys:
-          - v1-dependencies-{{ checksum "package.json" }}
-          # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
+      # - restore_cache:
+      #     keys:
+      #     - v1-dependencies-{{ checksum "package.json" }}
+      #     # fallback to using the latest cache if no exact match is found
+      #     - v1-dependencies-
 
       - run: 
           name: "Install dependencies"
-          command: |
-            yarn install
+          command: yarn install
 
-      - save_cache:
-          paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
+      # - save_cache:
+      #     paths:
+      #       - node_modules
+      #     key: v1-dependencies-{{ checksum "package.json" }}
         
       - run: 
           name: "Run tslint"
-          comand: |
-            yarn tslint
+          comand: yarn tslint
 
 
