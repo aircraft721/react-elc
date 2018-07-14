@@ -27,12 +27,21 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
+      - run:
+          name: prepare greenkeeper-lockfile
+          command: |
+            echo 'export PATH=$(yarn global bin):$PATH' >> $BASH_ENV
+            source $BASH_ENV
+            yarn global add greenkeeper-lockfile@1   
+          
       - run: yarn install
-
+      - run: greenkeeper-lockfile-update
+      
       - save_cache:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
         
       - run: yarn tslint
+      - run: greenkeeper-lockfile-upload
 
