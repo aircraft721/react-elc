@@ -28,10 +28,9 @@ jobs:
           - v1-dependencies-
 
       - run: yarn global add greenkeeper-lockfile@1    
-      - run: greenkeeper-lockfile-update
       - run: yarn install
+      - run: greenkeeper-lockfile-update
       
-
       - save_cache:
           paths:
             - node_modules
