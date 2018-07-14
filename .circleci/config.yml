@@ -36,6 +36,6 @@ jobs:
       #       - node_modules
       #     key: v1-dependencies-{{ checksum "package.json" }}
         
-      - run: npm tslint
+      - run: npm run tslint
 
 
