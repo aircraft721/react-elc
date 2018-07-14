@@ -27,7 +27,7 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
-      - run: yarn global add greenkeeper-lockfile    
+      - run: yarn global add greenkeeper-lockfile@1    
       - run: greenkeeper-lockfile-update
       - run: yarn install
       
