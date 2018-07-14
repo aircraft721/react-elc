@@ -30,7 +30,7 @@ jobs:
       - run:
         name: prepare greenkeeper-lockfile
         command: |
-          echo 'export PATH=$(yarn global bin):$PATH' >> $BASH_ENV
+          export PATH=$(yarn global bin):$PATH >> $BASH_ENV
           source $BASH_ENV
           yarn global add greenkeeper-lockfile@1    
           
