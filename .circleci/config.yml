@@ -28,11 +28,11 @@ jobs:
           - v1-dependencies-
 
       - run:
-        name: prepare greenkeeper-lockfile
-        command: |
-          echo "export PATH=$(yarn global bin):$PATH" >> $BASH_ENV
-          source $BASH_ENV
-          yarn global add greenkeeper-lockfile@1    
+          name: prepare greenkeeper-lockfile
+          command: |
+            echo 'export PATH=$(yarn global bin):$PATH' >> $BASH_ENV
+            source $BASH_ENV
+            yarn global add greenkeeper-lockfile@1   
           
       - run: yarn install
       - run: greenkeeper-lockfile-update
