@@ -25,7 +25,7 @@ exports = module.exports = (handler, settings) => { //  <== 1. Here we inject th
     //Here we return a function that starts to listen on port 3000 atm.
     return {
         start: () => {
-            app.use(PORT, () => console.log(`Server is up on ${HOST}:${PORT}`));
+            app.listen(PORT, () => console.log(`Server is up on ${HOST}:${PORT}`));
         }
     }
 }

@@ -1,3 +1,6 @@
+// This is where the login should be done.
+// Any manipulation of documents should be done here. 
+
 exports = module.exports = (model) => {
     return {
         postItem: async (doc) => {
