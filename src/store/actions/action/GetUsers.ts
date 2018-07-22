@@ -1,7 +1,7 @@
 import { Action } from 'redux';
 
 import { actionTypes } from '../actionTypes';
-import {IUser} from '../../model/IUserModel';
+import { IUser } from '../../model/IUserModel';
 
 declare var fetch: any;
 
@@ -27,14 +27,15 @@ export const GetUsers = () => {
         return fetch('http://localhost:3000/get')
             .then((res: any) => res.json())
             .then((users: IUser[]) => {
-                
-                const usersR:any = users.map((u)=>{
+
+                const usersR: any = users.map((u) => {
                     const user = new IUser();
                     user.name = user.name;
                     user.number = user.number;
-                    return usersR;
+                    return users;
                 })
                 dispatch(createGotUsersAction(usersR));
-            })
-    }
-}
+                return usersR;
+            });
+    };
+};
