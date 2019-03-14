@@ -19,7 +19,7 @@
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
-    "clean-webpack-plugin": "^0.1.19",
+    "clean-webpack-plugin": "^2.0.1",
     "css-loader": "^1.0.0",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
