@@ -30,7 +30,7 @@
     "mini-css-extract-plugin": "^0.4.0",
     "prettier": "^1.13.7",
     "sass-loader": "^7.0.3",
-    "style-loader": "^0.21.0",
+    "style-loader": "^1.2.1",
     "ts-loader": "^4.4.1",
     "tslint": "^5.10.0",
     "tslint-config-prettier": "^1.13.0",
